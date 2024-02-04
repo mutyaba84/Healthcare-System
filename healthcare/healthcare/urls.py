@@ -16,13 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users.views import login_view, verify_2fa
 
-from patients import views
+from patients import views as patients_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     
-    path('patient/search/', views.patient_search, name='patient_search'),
-    path('patient/details/<int:patient_id>/', views.patient_details, name='patient_details'),
+    path('patient/search/', patients_views.patient_search, name='patient_search'),
+    path('patient/details/<int:patient_id>/', patients_views.patient_details, name='patient_details'),
+    
+    path('login/', login_view, name='login'),
+    path('verify-2fa/', verify_2fa, name='verify_2fa'),
 ]
