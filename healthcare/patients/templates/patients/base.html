@@ -1,0 +1,25 @@
+<!-- patients/templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Healthcare System{% endblock %}</title>
+    <!-- Add your stylesheets, scripts, or other head content here -->
+  </head>
+  <body>
+    <header>
+      <h1>Healthcare System</h1>
+      <!-- Add navigation or header content here -->
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+      <!-- Add footer content here -->
+    </footer>
+
+    <!-- Add your scripts or other body content here -->
+  </body>
+</html>

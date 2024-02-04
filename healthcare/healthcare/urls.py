@@ -23,9 +23,9 @@ from patients import views as patients_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    path('users/', include('users.urls')),
     
     path('patient/', include('patients.urls')),
     
-    path('login/', login_view, name='login'),
-    path('verify-2fa/', verify_2fa, name='verify_2fa'),
+    
 ]

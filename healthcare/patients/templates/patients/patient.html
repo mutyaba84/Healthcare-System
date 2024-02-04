@@ -1,0 +1,24 @@
+<!-- patients/templates/patients/patient.html -->
+
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <h2>Patient Details</h2>
+  <hr />
+
+  <div class="patient-details">
+    <h3>{{ patient.first_name }} {{ patient.last_name }}</h3>
+    <p>Date of Birth: {{ patient.date_of_birth }}</p>
+    <p>Contact Details: {{ patient.contact_details }}</p>
+    <p>Insurance Information: {{ patient.insurance_information }}</p>
+
+    <!-- Add more patient details as needed -->
+
+    <h4>Medical History</h4>
+    <p>Pre-existing Conditions: {{ patient.pre_existing_conditions }}</p>
+    <p>Allergies: {{ patient.allergies }}</p>
+    <p>Surgeries or Treatments: {{ patient.surgeries_or_treatments }}</p>
+
+    <!-- Add more medical history details as needed -->
+  </div>
+</div>
+{% endblock %}

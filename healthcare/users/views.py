@@ -45,3 +45,8 @@ def verify_2fa(request):
             return render(request, 'login.html', {'error': '2FA not enabled for this user'})
 
     return redirect('login')
+
+
+def dashboard(request):
+    # Add logic for the dashboard view
+    return render(request, 'dashboard.html')
