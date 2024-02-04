@@ -2,6 +2,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Patient
 
+
 def patient_search(request):
     if request.method == 'POST':
         search_query = request.POST.get('search_query', '')
@@ -14,3 +15,8 @@ def patient_details(request, patient_id):
     patient = get_object_or_404(Patient, pk=patient_id)
     # Implement verification logic here
     return render(request, 'patient_details.html', {'patient': patient})
+
+
+
+
+

@@ -12,3 +12,4 @@ class Patient(models.Model):
     allergies = models.TextField(blank=True)
     surgeries_or_treatments = models.TextField(blank=True)
     # other relevant patient information
+

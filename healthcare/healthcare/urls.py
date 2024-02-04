@@ -24,8 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     
-    path('patient/search/', patients_views.patient_search, name='patient_search'),
-    path('patient/details/<int:patient_id>/', patients_views.patient_details, name='patient_details'),
+    path('patient/', include('patients.urls')),
     
     path('login/', login_view, name='login'),
     path('verify-2fa/', verify_2fa, name='verify_2fa'),
