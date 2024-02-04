@@ -5,6 +5,13 @@ name = "pypi"
 
 [packages]
 django = "*"
+djangorestframework = "*"
+kleides-mfa = "*"
+django-otp-notify = "*"
+django-otp-messagebird = "*"
+django-allauth = "*"
+django-two-factor-auth = {extras = ["phonenumbers"], version = "*"}
+django-otp = {extras = ["plugins"], version = "*"}
 
 [dev-packages]
 
