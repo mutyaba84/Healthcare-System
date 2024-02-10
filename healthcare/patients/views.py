@@ -1,6 +1,7 @@
 # views.py
 from django.shortcuts import render, get_object_or_404
 from .models import Patient
+from django.shortcuts import render
 
 
 def patient_search(request):
@@ -15,6 +16,10 @@ def patient_details(request, patient_id):
     patient = get_object_or_404(Patient, pk=patient_id)
     # Implement verification logic here
     return render(request, 'patient_details.html', {'patient': patient})
+
+def dashboard(request):
+    return render(request, 'patients/dashboard.html')
+
 
 
 

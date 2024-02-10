@@ -8,4 +8,6 @@ urlpatterns = [
     path('verify-2fa/', verify_2fa, name='verify_2fa'),
     path('dashboard/', dashboard, name='dashboard'),
     # Add other user-related URLs as needed
+    
+    
 ]

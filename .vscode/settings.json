@@ -1,0 +1,8 @@
+{
+  "python.linting.pylintEnabled": true,
+  "python.pythonPath": "C:\\Users\\HP ProBook\\.virtualenvs\\Healthcare-system-A7Z2XBaS\\Scripts\\python.exe",
+  "cSpell.words": [
+    "allauth",
+    "socialaccount"
+  ]
+}

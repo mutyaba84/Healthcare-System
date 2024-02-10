@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 
 from .forms import LoginForm
 
+
 def login_view(request):
     form = LoginForm(request.POST or None)
     if request.method == 'POST':
@@ -48,5 +49,10 @@ def verify_2fa(request):
 
 
 def dashboard(request):
-    # Add logic for the dashboard view
-    return render(request, 'dashboard.html')
+    if request.user.is_authenticated:
+        # Redirect to the appropriate dashboard based on user type
+        if request.user.is_patient:
+            return redirect('patient_dashboard')
+        # Add other user types as needed
+    return redirect('login')
+

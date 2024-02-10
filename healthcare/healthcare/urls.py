@@ -28,4 +28,6 @@ urlpatterns = [
     path('patient/', include('patients.urls')),
     
     
+    
+    
 ]

@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_static',
     'django_otp.plugins.otp_totp',
     'django_otp.plugins.otp_email',  # <- if you want email capability.
+    'django_otp.backends',
     
     'two_factor',
     'two_factor.plugins.phonenumber',  # <- if you want phone number capability.
@@ -162,3 +163,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+
+
+LOGIN_REDIRECT_URL = 'patients:dashboard'
