@@ -1,26 +1,15 @@
-<!-- patient_search_results.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Search Results</title>
-  </head>
-  <body>
-    <h2>Patient Search Results</h2>
-    {% if patients %}
-    <ul>
-      {% for patient in patients %}
-      <li>
-        <a href="{% url 'patient_details' patient.id %}"
-          >{{ patient.first_name }} {{ patient.last_name }}</a
-        >
-      </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-    <p>No patients found.</p>
-    {% endif %}
-  </body>
-</html>
+{% extends 'base.html' %} {% block content %}
+<h2>Patient Search Results</h2>
+{% if patients %}
+<ul>
+  {% for patient in patients %}
+  <li>
+    <a href="{% url 'patient_details' patient.id %}"
+      >{{ patient.first_name }} {{ patient.last_name }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No patients found.</p>
+{% endif %} {% endblock %}
