@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_static',
     'django_otp.plugins.otp_totp',
     'django_otp.plugins.otp_email',  # <- if you want email capability.
-    'django_otp.backends',
+    
     
     'two_factor',
     'two_factor.plugins.phonenumber',  # <- if you want phone number capability.
@@ -95,6 +95,7 @@ MIDDLEWARE = [
 AUTHENTICATION_BACKENDS = [
     'django_otp.backends.OTPTokenBackend',
     'django.contrib.auth.backends.ModelBackend',
+    
 ]
 
 ROOT_URLCONF = 'healthcare.urls'
